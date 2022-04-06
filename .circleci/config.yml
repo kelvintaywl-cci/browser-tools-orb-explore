@@ -1,0 +1,16 @@
+version: 2.1
+
+orbs: 
+  browser-tools: circleci/browser-tools@1.2.5
+
+jobs:
+  test:
+    docker:
+      - image: cimg/ruby:3.0.3-browsers
+    steps:
+      - browser-tools/install-chrome: { chrome-version: 92.0.4515.159 }
+
+workflows:
+  main:
+    jobs:
+      - test
