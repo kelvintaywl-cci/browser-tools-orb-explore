@@ -46,7 +46,10 @@ jobs:
             
             launch_xvfb
             echo "Launced Xvfb"
-      - run: google-chrome
+      - run:
+          name: Run Chrome
+          command: google-chrome
+          background: true
       - run:
           command: |
             while true; do
