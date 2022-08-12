@@ -45,6 +45,7 @@ jobs:
             }
             
             launch_xvfb
+            echo "Launced Xvfb"
 
 workflows:
   main:
