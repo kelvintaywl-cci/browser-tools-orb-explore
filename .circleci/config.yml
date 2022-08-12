@@ -46,7 +46,17 @@ jobs:
             
             launch_xvfb
             echo "Launced Xvfb"
-
+      - run: google-chrome
+      - run:
+          command: |
+            while true; do
+              sleep 5
+              printf "\n\n$(date)\n"
+              top -b -c -n 1
+              echo "======"
+            done
+          background: true
+      - run: sleep 31
 workflows:
   main:
     jobs:
